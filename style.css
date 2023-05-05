@@ -1,0 +1,64 @@
+body {
+  width: 300px;
+  margin: 20px auto;
+  line-height: 50px;
+  text-align: center;
+  counter-reset: section;
+}
+
+.coolTitle {
+  text-align: center;
+  font-family: 'Oswald', Helvetica, sans-serif;
+  font-size: 40px;
+  transform: skewY(-5deg);
+  letter-spacing: 4px;
+  word-spacing: -8px;
+  color: rgb(203, 88, 67);
+  text-shadow:
+    -1px -1px 0 firebrick,
+    -2px -2px 0 firebrick,
+    -3px -3px 0 firebrick,
+    -4px -4px 0 firebrick,
+    -5px -5px 0 firebrick,
+    -6px -6px 0 firebrick,
+    -7px -7px 0 firebrick,
+    -8px -8px 0 firebrick,
+    -30px 20px 40px dimgrey;
+}
+
+input {
+  height: 25px;
+  width: 150px;
+  margin-right: 75px;
+}
+
+button {
+  height: 30px;
+  width: 60px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px gray;
+}
+
+ul {
+  padding-left: 0px;
+}
+
+li {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+span::before {
+  counter-increment: section;
+  content: counter(section) ": ";
+}
+
+.delete {
+  color: red;
+}
+
+.done {
+  text-decoration: line-through;
+}
